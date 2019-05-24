@@ -31,6 +31,8 @@
               color="primary"
               >로그인</v-btn
             >
+            <!-- <v-btn @click="test">테스트</v-btn>
+            <v-btn @click="postTest">postTest</v-btn>-->
           </div>
         </v-card>
       </v-flex>
@@ -40,6 +42,7 @@
 <script>
 import { mapState, mapActions } from "vuex"
 
+// const axios = require("axios")
 export default {
   data() {
     return {
@@ -54,6 +57,35 @@ export default {
   },
   methods: {
     ...mapActions(["login"])
+    // test() {
+    //   axios
+    //     .get("https://reqres.in/api/users?page=2")
+    //     .then(res => {
+    //       // handle success
+    //       console.log(res)
+    //     })
+    //     .catch(err => {
+    //       // handle error
+    //       console.log(err)
+    //     })
+    //     .finally(() => {
+    //       console.log("test")
+    //       // always executed
+    //     })
+    // },
+    // postTest() {
+    //   axios
+    //     .post("https://reqres.in/api/register", {
+    //       email: "eve.holt@reqres.in",
+    //       password: "pistol"
+    //     })
+    //     .then(res => {
+    //       console.log(res)
+    //     })
+    //     .catch(err => {
+    //       console.log(err)
+    //     })
+    // }
     //login() {
     //전체 유저에서 해당 이메일로 유저를 찾는다
     // let selectedUser = null
